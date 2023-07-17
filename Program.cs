@@ -1,18 +1,24 @@
 ﻿namespace BasicCorePrograms
 {
-    internal class ComputeDemo
+    internal class EvenOddNumber
     {
         static void Main(string[] args)
         {
-            int dividend = 8, divisor = 5;
+            int i;
+            Console.Write("Enter a Number : ");
+            i = int.Parse(Console.ReadLine());
+            if (i % 2 == 0)
+            {
+                Console.Write("Entered Number is an Even Number");
+                Console.Read();
+            }
+            else
+            {
+                Console.Write("Entered Number is an Odd Number");
+                Console.Read();
+            }
 
-            int quotient = dividend / divisor;
-            int remainder = dividend % divisor;
 
-            Console.WriteLine("Dividend:{0} Divisor:{1}", dividend, divisor);
-            Console.WriteLine("Quotient = " + quotient);
-            Console.WriteLine("Remainder = " + remainder);
-            Console.ReadLine();
 
         }
     }
