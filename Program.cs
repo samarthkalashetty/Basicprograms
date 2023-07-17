@@ -1,33 +1,49 @@
 ﻿namespace BasicCorePrograms
 {
-    internal class FlipcoinDemo
+    internal class Alphabet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Flip the Coin Program");
-            double heads = 0;
-            double tails = 0;
-            double headPercentage, tailPercentage;
+            char ch;
+            Console.Write("\n\n");
+            Console.Write("check whether the input alphabet is a vowel or not:\n");
+            Console.Write("-----------------------------------------------------");
+            Console.Write("\n\n");
 
-            Console.WriteLine("Enter the number of times the coin is to be flipped:");
-            int num = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < num; i++)
+            Console.Write("Input an Alphabet (A-Z or a-z) : ");
+            ch = Convert.ToChar(Console.ReadLine().ToLower());
+            int i = ch;
+            if (i >= 48 && i <= 57)
             {
-                Random random = new Random();
-                double result = random.NextDouble();
-
-                if (result > 0.5)
-                    heads++;
-                else
-                    tails++;
+                Console.Write("You entered a number, Please enter an alpahbet.");
             }
-            Console.WriteLine("Head count: " + heads);
-            Console.WriteLine("Tail count: " + tails);
+            else
+            {
+                switch (ch)
+                {
+                    case 'a':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'i':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'o':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'u':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'e':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    default:
+                        Console.WriteLine("The Alphabet is not a vowel");
+                        break;
+                }
+            }
+            Console.ReadKey();
 
-            headPercentage = (heads / num) * 100;
-            Console.WriteLine("Heads percentage: " + headPercentage);
-            tailPercentage = (tails / num) * 100;
-            Console.WriteLine("Tail percentage: " + tailPercentage);
+
         }
     }
 }
